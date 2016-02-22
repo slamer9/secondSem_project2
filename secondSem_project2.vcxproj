@@ -152,6 +152,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Author.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="secondSem_project2.cpp" />
     <ClCompile Include="stdafx.cpp">
