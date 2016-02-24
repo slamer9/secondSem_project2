@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Author.cpp" />
+    <ClCompile Include="Book.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="secondSem_project2.cpp" />
     <ClCompile Include="stdafx.cpp">

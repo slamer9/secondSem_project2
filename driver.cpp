@@ -35,7 +35,17 @@ int main()
 	return 0;
 }
 
-void displayBooks(const vector<Book>& books)
+void displayBooks(/*const*/ vector<Book>& books)
 {
-	// students need to write the code for this function
+	for (int X = 0; X < books.size(); X++)
+	{
+		string bookName = books[X].getTitle();
+		Author bookAuthor = books[X].getAuthor();
+		int bookPages = books[X].getNumOfPages();
+		double bookCost = books[X].getPrice();
+
+		cout << bookName << endl << bookAuthor.getName() << endl << bookAuthor.getAdress()
+			<< endl << bookPages << endl << bookCost << endl << endl;
+		system("PAUSE"); // GET RID OF THIS LINE AFTER TESTING
+	}
 }

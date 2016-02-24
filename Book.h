@@ -18,6 +18,6 @@ private:
 	Author myAuthor;
 	string title;
 	int numOfPages;
-	double Price;
+	double price;
 
 };

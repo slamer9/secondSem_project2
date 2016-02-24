@@ -15,4 +15,4 @@ using namespace std;
 // Purpose: Display all of the data about a book
 // Parameters: A vector of Book objects
 // Returns: none
-void displayBooks(const vector<Book>&);
+void displayBooks(/*const*/ vector<Book>&);

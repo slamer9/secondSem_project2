@@ -11,6 +11,7 @@ public:
 	string getName();
 	string getAdress();
 
+
 private:
 	string name;
 	string adress;
