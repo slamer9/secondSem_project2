@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Author.h"
 
+Author::Author()
+{
+}
+
 Author::Author(string Authorname, string Authoradress)
 {
 	name = Authorname;

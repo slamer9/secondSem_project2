@@ -46,6 +46,5 @@ void displayBooks(/*const*/ vector<Book>& books)
 
 		cout << bookName << endl << bookAuthor.getName() << endl << bookAuthor.getAdress()
 			<< endl << bookPages << endl << bookCost << endl << endl;
-		system("PAUSE"); // GET RID OF THIS LINE AFTER TESTING
 	}
 }
