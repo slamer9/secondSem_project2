@@ -6,6 +6,33 @@
 // Driver code, Programming Project #2
 // =======================================
 
+class readException
+{
+private:
+	int errorCode;
+
+public:
+	readException(int e)
+	{
+		errorCode = e;
+	}
+	
+	void endOfFile()
+	{
+		cout << "You have reached the end of the file." << endl;
+	}
+
+	void read_error()
+	{
+		cout << "Error, could not read file." << endl;
+	}
+
+	void cantOpenFile()
+	{
+		cout << "Error, can't open file (does it exist?)" << endl;
+	}
+};
+
 int main()
 {
 
