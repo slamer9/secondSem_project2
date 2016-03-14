@@ -22,4 +22,5 @@ private:
 	int numOfPages;
 	double price;
 
+
 };
