@@ -4,7 +4,7 @@
 //Author: Roger deBry
 // Date last modified: October 2015
 // Driver code, Programming Project #2
-// =======================================
+// ========================================
 
 class readException
 {
@@ -64,7 +64,7 @@ int main()
 
 void displayBooks(/*const*/ vector<Book>& books)
 {
-	for (int X = 0; X < books.size(); X++)
+	for (unsigned int X = 0; X < books.size(); X++)
 	{
 		string bookName = books[X].getTitle();
 		Author bookAuthor = books[X].getAuthor();

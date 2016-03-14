@@ -21,6 +21,4 @@ private:
 	string title;
 	int numOfPages;
 	double price;
-
-
 };
