@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "driver.h"
+#include "ReadException.h"
 // Copyright 2015, Utah Valley University
 //Author: Roger deBry
 // Date last modified: October 2015
