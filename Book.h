@@ -13,8 +13,8 @@ public:
 	string getTitle();
 	int getNumOfPages();
 	double getPrice();
-	ifstream readDataB(ifstream&);
-	ofstream writeDataB(ofstream&);
+	void readData(ifstream&);
+	void writeData(ofstream&);
 
 private:
 	Author myAuthor;

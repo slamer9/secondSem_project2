@@ -51,12 +51,11 @@ int main()
 		}
 	}
 
+	system("PAUSE");
+	return 0;
 	////// call the displayBooks function to display the books
 	////displayBooks(myBooks);
 	////cout << "\n\n";
-
-	system("PAUSE");
-	return 0;
 }
 
 void displayBooks(/*const*/ vector<Book>& books)
@@ -101,6 +100,16 @@ void createTestFile()
 
 	for (unsigned i = 0; i < myBooks.size(); ++i)
 	{
-		myBooks[i].writeDataB(outputFile);
+		myBooks[i].writeData(outputFile);
 	}
+}
+
+void readTestFile()
+{
+	///must provide this code
+}
+
+void openFile(ifstream& in, const string& _name)
+{
+	///must provide this code
 }

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Book.h"
 
+using namespace std;
+
 Book::Book(Author bookAuthor, string bookName, int bookPages, double bookCost)
 {
 	myAuthor = bookAuthor;
@@ -28,3 +30,4 @@ double Book::getPrice()
 {
 	return price;
 }
+
