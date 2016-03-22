@@ -22,15 +22,15 @@ public:
 
 	void readError()
 	{
-		if (errorCode == 1)
+		if (errorCode == READ_ERROR)
 		{
 			cout << "Could not read the file." << endl;
 		}else
-			if (errorCode == 2)
+			if (errorCode == END_OF_FILE)
 			{
 				cout << "End of file reached." << endl;
 			} else
-				if (errorCode == 3)
+				if (errorCode == COULD_NOT_OPEN_FILE)
 			{
 				cout << "Could not open file, check to see if it exists, and path is accurate." << endl;
 			}
