@@ -106,11 +106,19 @@ void createTestFile()
 
 void readTestFile()
 {
+<<<<<<< HEAD
 
 	//must provide this code
+=======
+	///must provide this code
+>>>>>>> origin/master
 }
 
 void openFile(ifstream& in, const string& _name)
 {
+<<<<<<< HEAD
 	//must provide this code
+=======
+	///must provide this code
+>>>>>>> origin/master
 }
