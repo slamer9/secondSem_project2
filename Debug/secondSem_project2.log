@@ -1,5 +1,5 @@
-﻿Build started 3/17/2016 6:36:18 PM.
-     1>Project "C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\secondSem_project2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/22/2016 10:53:19 PM.
+     1>Project "C:\Users\sreeves\Documents\GitHub\secondSem_project2\secondSem_project2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\secondSem_project2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
@@ -7,18 +7,13 @@
          secondSem_project2.cpp
          driver.cpp
          Book.cpp
+     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(36): error C2027: use of undefined type 'std::basic_ofstream<char,std::char_traits<char>>'
+     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(36): error C2228: left of '.fail' must have class/struct/union
+     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(38): error C2065: 'cout': undeclared identifier
          Author.cpp
          Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\Debug\secondSem_project2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\Debug\secondSem_project2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\Debug\secondSem_project2.lib" /MACHINE:X86 Debug\Author.obj
-         Debug\Book.obj
-         Debug\driver.obj
-         Debug\secondSem_project2.obj
-         Debug\stdafx.obj
-     1>driver.obj : error LNK2019: unresolved external symbol "public: class std::basic_ofstream<char,struct std::char_traits<char> > __thiscall Book::writeDataB(class std::basic_ofstream<char,struct std::char_traits<char> > &)" (?writeDataB@Book@@QAE?AV?$basic_ofstream@DU?$char_traits@D@std@@@std@@AAV23@@Z) referenced in function "void __cdecl createTestFile(void)" (?createTestFile@@YAXXZ)
-     1>C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\Debug\secondSem_project2.exe : fatal error LNK1120: 1 unresolved externals
-     1>Done Building Project "C:\Users\sreeves\Desktop\Duncan\Code\Zipped_temp\secondSem_project2-master\secondSem_project2.vcxproj" (Build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\sreeves\Documents\GitHub\secondSem_project2\secondSem_project2.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.64
+Time Elapsed 00:00:01.94
