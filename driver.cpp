@@ -53,9 +53,9 @@ int main()
 
 	system("PAUSE");
 	return 0;
-	////// call the displayBooks function to display the books
-	////displayBooks(myBooks);
-	////cout << "\n\n";
+	////// call the displayBooks function to display the books	::: NO LONGER NEEDED CODE
+	////displayBooks(myBooks);									::: NO LONGER NEEDED CODE
+	////cout << "\n\n";											::: NO LONGER NEEDED CODE
 }
 
 void displayBooks(/*const*/ vector<Book>& books)
@@ -106,6 +106,20 @@ void createTestFile()
 
 void readTestFile()
 {
+	string data;					//test
+	ifstream toScreen;
+	toScreen.open("bookData.txt");
+	do
+	{
+		if (toScreen >> data)
+		{
+			cout << data << endl;
+		}
+		else
+		{
+			cout << "Error 1" << endl;
+		}
+	} while (!toScreen.eof());		//endtest
 	//must provide this code
 
 }

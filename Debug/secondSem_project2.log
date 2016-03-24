@@ -1,19 +1,14 @@
-﻿Build started 3/22/2016 10:53:19 PM.
-     1>Project "C:\Users\sreeves\Documents\GitHub\secondSem_project2\secondSem_project2.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\secondSem_project2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\secondSem_project2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Author.cpp Book.cpp driver.cpp secondSem_project2.cpp
-         secondSem_project2.cpp
-         driver.cpp
-         Book.cpp
-     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(36): error C2027: use of undefined type 'std::basic_ofstream<char,std::char_traits<char>>'
-     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(36): error C2228: left of '.fail' must have class/struct/union
-     1>c:\users\sreeves\documents\github\secondsem_project2\book.cpp(38): error C2065: 'cout': undeclared identifier
-         Author.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\sreeves\Documents\GitHub\secondSem_project2\secondSem_project2.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 3/24/2016 9:47:42 AM.
+     1>Project "C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\secondSem_project2\secondSem_project2.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\Debug\secondSem_project2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\Debug\secondSem_project2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\Debug\secondSem_project2.lib" /MACHINE:X86 Debug\Author.obj
+         Debug\Book.obj
+         Debug\driver.obj
+         Debug\secondSem_project2.obj
+         Debug\stdafx.obj
+         secondSem_project2.vcxproj -> C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\Debug\secondSem_project2.exe
+     1>Done Building Project "C:\Users\reevedun000\Documents\Visual Studio 2015\Projects\secondSem_project2\secondSem_project2\secondSem_project2.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.94
+Time Elapsed 00:00:00.17

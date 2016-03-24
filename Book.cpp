@@ -43,7 +43,7 @@ void Book::writeData(ofstream& myOfStream)
 	else
 	{
 		myOfStream << myAuthor.getName() << endl << myAuthor.getAdress() << endl <<
-			title << endl << numOfPages << endl << price << endl << endl;
+			title << endl << numOfPages << endl << price << endl << endl << endl;
 	}
 }
 
