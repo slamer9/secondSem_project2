@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "driver.h"
-#include "ReadException.h"
-// Copyright 2015, Utah Valley University
-//Author: Roger deBry
-// Date last modified: October 2015
-// Driver code, Programming Project #2
-// ========================================
+#include "ReadException.h" // Includes using namespace std;
+/// Copyright 2015, Utah Valley University
+///Author: Roger deBry
+/// Date last modified: October 2015
+/// Driver code, Programming Project #2
+/// ========================================
+
+#define MAX_SIZE 100
 
 int main()
 {
@@ -106,20 +108,23 @@ void createTestFile()
 
 void readTestFile()
 {
+	char bufferArray[MAX_SIZE];
 	string data;					//test
 	ifstream toScreen;
 	toScreen.open("bookData.txt");
-	do
+	while (!toScreen.eof())
 	{
-		if (toScreen >> data)
-		{
-			cout << data << endl;
-		}
-		else
-		{
-			cout << "Error 1" << endl;
-		}
-	} while (!toScreen.eof());		//endtest
+		toScreen.getline(bufferArray, MAX_SIZE);
+		cout << bufferArray << endl;
+		//if (toScreen >> data)
+		//{
+		//	cout << data << endl;
+		//}
+		//else
+		//{
+		//	cout << "Error 1" << endl;
+		//}
+	}								//endtest
 	//must provide this code
 
 }
