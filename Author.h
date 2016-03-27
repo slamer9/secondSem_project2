@@ -10,9 +10,6 @@ public:
 	Author(string, string);
 	string getName();
 	string getAdress();
-	void readData(ifstream&);
-	void writeData(ofstream&);
-
 
 private:
 	string name;

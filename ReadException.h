@@ -3,11 +3,9 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
-const int READ_ERROR = 1;
-const int END_OF_FILE = 2;
-const int COULD_NOT_OPEN_FILE = 3;
+#define READ_ERROR 1
+#define END_OF_FILE 2
+#define COULD_NOT_OPEN_FILE 3
 
 class ReadException
 {
@@ -24,20 +22,13 @@ public:
 	{
 		if (errorCode == READ_ERROR)
 		{
-			cout << "Could not read the file." << endl;
-		}else
-			if (errorCode == END_OF_FILE)
-			{
-				cout << "End of file reached." << endl;
-			} else
-				if (errorCode == COULD_NOT_OPEN_FILE)
-			{
-				cout << "Could not open file, check to see if it exists, and path is accurate." << endl;
-			}
-				else
-				{
-					cout << "Unknown error." << endl;
-				}
-	}
+			std::cout << "Could not read the file." << std::endl;
+		}
+		else
+		if (errorCode == COULD_NOT_OPEN_FILE)
+		{
+			std::cout << "Could not open file, check to see if it exists, and path is accurate." << std::endl;
+		}
 
+	}
 };

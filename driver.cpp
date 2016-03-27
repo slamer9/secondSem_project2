@@ -1,13 +1,15 @@
 #include "stdafx.h"
 #include "driver.h"
-#include "ReadException.h" // Includes using namespace std;
+#include "ReadException.h" 
 /// Copyright 2015, Utah Valley University
 ///Author: Roger deBry
 /// Date last modified: October 2015
 /// Driver code, Programming Project #2
 /// ========================================
+using namespace std;
 
 #define MAX_SIZE 100
+const string fileName = "bookData.txt";
 
 int main()
 {
@@ -62,6 +64,7 @@ int main()
 
 void displayBooks(/*const*/ vector<Book>& books)
 {
+	cout << endl << endl;
 	for (unsigned int X = 0; X < books.size(); X++)
 	{
 		string bookName = books[X].getTitle();
@@ -70,7 +73,7 @@ void displayBooks(/*const*/ vector<Book>& books)
 		double bookCost = books[X].getPrice();
 
 		cout << bookName << endl << bookAuthor.getName() << endl << bookAuthor.getAdress()
-			<< endl << bookPages << " Pages" << endl << "$" << bookCost << endl << endl;
+			<< endl << bookPages << endl << bookCost << endl << endl;
 	}
 }
 
@@ -98,7 +101,7 @@ void createTestFile()
 	/// the file will be in the same folder as the executable file
 	/// assume that the file opens
 	ofstream outputFile;
-	outputFile.open("bookData.txt");
+	outputFile.open(fileName);
 
 	for (unsigned i = 0; i < myBooks.size(); ++i)
 	{
@@ -109,28 +112,69 @@ void createTestFile()
 void readTestFile()
 {
 	char bufferArray[MAX_SIZE];
-	string data;					//test
 	ifstream toScreen;
-	toScreen.open("bookData.txt");
-	while (!toScreen.eof())
+	vector<Book> bookVector;
+	try 
 	{
-		toScreen.getline(bufferArray, MAX_SIZE);
-		cout << bufferArray << endl;
-		//if (toScreen >> data)
-		//{
-		//	cout << data << endl;
-		//}
-		//else
-		//{
-		//	cout << "Error 1" << endl;
-		//}
-	}								//endtest
-	//must provide this code
+		openFile(toScreen, fileName);
+		while (true)
+		{
+			string bookName;
+			string authorName;
+			string authorAdress;
+			int bookPages;
+			double bookCost;
 
+			if (!toScreen.getline(bufferArray, MAX_SIZE))
+				if (toScreen.eof())
+					throw ReadException(END_OF_FILE);
+				else
+				throw ReadException(READ_ERROR);
+
+			authorName.append(bufferArray);
+
+			if (!toScreen.getline(bufferArray, MAX_SIZE))
+				throw ReadException(READ_ERROR);
+
+			authorAdress.append(bufferArray);
+
+			if (!toScreen.getline(bufferArray, MAX_SIZE))
+				throw ReadException(READ_ERROR);
+
+			bookName.append(bufferArray);
+
+			if (!toScreen.getline(bufferArray, MAX_SIZE))
+				throw ReadException(READ_ERROR);
+
+			if (!(bookPages = atoi(bufferArray)))
+				throw ReadException(READ_ERROR);
+
+			if (!toScreen.getline(bufferArray, MAX_SIZE))
+				throw ReadException(READ_ERROR);
+
+			bookCost = atof(bufferArray);
+
+			if (!toScreen.getline(bufferArray, MAX_SIZE))	//Get rid of empty lines at end of each book
+				throw ReadException(READ_ERROR);			//
+			if (bufferArray[0] != NULL)						//
+				throw ReadException(READ_ERROR);			//
+
+
+			Author newAuthor = Author(authorName, authorAdress);
+			Book newBook = Book(newAuthor, bookName, bookPages, bookCost);
+			bookVector.push_back(newBook);
+		}
+	}
+	catch (ReadException e)
+	{
+		e.readError();
+		displayBooks(bookVector);
+	}
 }
 
 void openFile(ifstream& in, const string& _name)
 {
-	//must provide this code
-
+	in.open(_name);
+	if (in.fail())
+		throw ReadException(COULD_NOT_OPEN_FILE);
 }

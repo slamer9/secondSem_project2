@@ -37,13 +37,9 @@ double Book::getPrice()
 void Book::writeData(ofstream& myOfStream)
 {
 	if (myOfStream.fail())
-	{
 		cout << "There was an error in creating the file" << endl;
-	}
-	else
-	{
-		myOfStream << myAuthor.getName() << endl << myAuthor.getAdress() << endl <<
-			title << endl << numOfPages << endl << price << endl << endl << endl;
-	}
+
+	myOfStream << myAuthor.getName() << endl << myAuthor.getAdress() << endl <<
+		title << endl << numOfPages << endl << price << endl << endl;
 }
 

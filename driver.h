@@ -11,7 +11,6 @@
 #include <string>
 #include <vector>
 #include "Book.h"
-using namespace std;
 
 // The displayBooks function
 // Purpose: Display all of the data about a book
