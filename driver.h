@@ -7,10 +7,10 @@
 // =================================================
 #include <iostream>
 #include <fstream>
-#include <iostream>
 #include <string>
 #include <vector>
-#include "Book.h"
+#include "Book.h"  /// the file name for your classes may be different
+using namespace std;
 
 // The displayBooks function
 // Purpose: Display all of the data about a book

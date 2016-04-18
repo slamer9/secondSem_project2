@@ -6,7 +6,6 @@
 /// Date last modified: October 2015
 /// Driver code, Programming Project #2
 /// ========================================
-using namespace std;
 
 #define MAX_SIZE 100
 const string fileName = "bookData.txt";
@@ -57,14 +56,16 @@ int main()
 
 	system("PAUSE");
 	return 0;
-	////// call the displayBooks function to display the books	::: NO LONGER NEEDED CODE
-	////displayBooks(myBooks);									::: NO LONGER NEEDED CODE
-	////cout << "\n\n";											::: NO LONGER NEEDED CODE
 }
 
 void displayBooks(/*const*/ vector<Book>& books)
 {
 	cout << endl << endl;
+	// set up cout to display currency
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+
 	for (unsigned int X = 0; X < books.size(); X++)
 	{
 		string bookName = books[X].getTitle();
